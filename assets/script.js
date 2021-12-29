@@ -7,7 +7,7 @@ const ADDRESS = '0xcA358198C9435A226F964AE11118019262c7a99F';
 const web3 = window.Web3
 const ethereum = window.ethereum
 let accounts
-let price = 0.04
+let price = 0.05
 const input = document.querySelector(".eth_input")
 const button = document.querySelector(".metamask_content-btn")
 const buttonor = document.querySelector(".buttonorer")
@@ -95,10 +95,10 @@ input.addEventListener("input", () => {
     if (+input.value < 1) button.disabled = true
     else if (+input.value >= 1) button.disabled = false
 
-    price = +input.value * 0.04
+    price = +input.value * 0.05
     if (+input.value >= 1) priceDisplay.innerText = price.toFixed(2)
 	//else if(input.value < 1) input.value =+ "1"
-	else priceDisplay.innerText = "0.04"
+	else priceDisplay.innerText = "0.05"
 })
 
 button.addEventListener("click", async () => {
